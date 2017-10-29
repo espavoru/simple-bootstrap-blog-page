@@ -1,0 +1,16 @@
+/* Mixins */
+@mixin fa($content: '.fa-bars'){ /* fa('.fa-shopping-bag'); */
+    &:before{
+        @extend .fa;
+        @extend #{$content};
+        margin-right: 5px;
+    }
+};
+
+@mixin fa-after($content: '.fa-bars'){ /* fa('.fa-shopping-bag'); */
+    &:after{
+        @extend .fa;
+        @extend #{$content}:before;
+        margin-left: 5px;
+    }
+};
